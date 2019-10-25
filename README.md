@@ -124,13 +124,14 @@ ls data/*.fastq.gz | cut -d "_" -f1 | sed 's:data/::' | sort | uniq
 
 ### Creating directories
 
-You can use the "-p" argument of "mkdir" to make it create the directory if
-it doesn't exist, and do nothing if it does.
+You can use the "-p" argument of "mkdir" to create a directory if
+it doesn't exist, and do nothing if it does. This is useful so that there
+are no errors when running a script many times.
 
 ### Monitoring the execution of your pipeline
 
 You may want to redirect the output from your main script to a file, so you can see what worked
-and what not. You can redirecto **both** stdout and stderr like this:
+and what not. You can redirect **both** stdout and stderr like this:
 
 `bash run_pipeline.sh &> log/run_pipeline.out`
 
