@@ -33,7 +33,7 @@ Once you fork the project, you will have a copy of the repository on a new URL:
 
 #### Adding your instructor as a collaborator
 
-You should now add your instructor as a collaborator to your copy of the repository,
+You should now add your instructor as a collaborator in your copy of the repository,
 so that she/he can interact with you during the development.
 
 #### Getting help
@@ -41,7 +41,10 @@ so that she/he can interact with you during the development.
 You can now ask for help from your instructor by creating a new issue in the GitHub
 repository (Click on the "Issues" tab on the top right of the GitHub repo page),
 adding a relevant title and description, **and assigning the issue to your instructor**.
-You can assign the issue clicking on the "Assignees" title on the right left.
+
+You can assign the issue by clicking on the "Assignees" title on the right left.
+
+> Make sure your instructor appears on the list of possible assignees
 
 #### Cloning your fork and starting work
 
