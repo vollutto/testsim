@@ -2,23 +2,23 @@
 
 ## Introduction
 
-In this project, you will be analysing RNA-seq data of Escherichia coli bacteria.
+In this project, you will be analysing RNA-seq data from Escherichia coli bacteria.
 These bacteria have had some DNA-damage handling proteins over-expressed, and you
 would like to perform a transcriptome-wide study of its effects.
 
 ## Setting up your environment
 
-## Conda
+### Conda
 
 You should create a new, empty conda repository. Make sure you have set up 
 Bioconda to be able to install the necessary packages. [See this link for details
 on setting up conda and bioconda](http://bioconda.github.io/user/install.html).
 
-## Git repository
+### Git repository
 
 Your working directory will be under git control.
 
-### Forking this repository
+#### Forking this repository
 
 You should start by forking this repository. A git **fork** creates a copy
 of the repository *on your own GitHub account*. This copy will become the remote
@@ -30,7 +30,7 @@ Once you fork the project, you will have a copy of the repository on a new URL:
 
 https://github.com/<your_username>/testsim
 
-### Cloning your fork and starting work
+#### Cloning your fork and starting work
 
 You should now **clone** this new repository to obtain a local copy in your machine.
 
@@ -39,7 +39,7 @@ You can now start working on your local copy of the repository.
 > Remember to commit often. Don't go crazy about it, but do generate a history of your work.
 
 
-## Working directory organisation
+### Organisation of your files
 
 The repository already contains a folder structure to help you organise your files.
 It also contains the data files for three different E. coli samples.
