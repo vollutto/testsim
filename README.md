@@ -98,15 +98,6 @@ and **push** your changes to the remote repository.
 
 ## Hints
 
-### Getting the list of samples
-
-You can obtain the list of samples from the sample files with this command:
-
-```shell
-ls data/*.fastq.gz | cut -d "_" -f1 | sed 's:data/::' | sort | uniq
-# Bonus brownie points if you replace the "sed" with something else.
-```
-
 ### Organising your scripts
 
 You can structure your program as you like. Here's an example for a parent
@@ -120,4 +111,13 @@ do
    # this command should receive the sample ID as the only argument
 done
 # place here any commands that need to run after analysing the samples
+```
+
+### Getting the list of samples
+
+You can obtain the list of samples from the sample files with this command:
+
+```shell
+ls data/*.fastq.gz | cut -d "_" -f1 | sed 's:data/::' | sort | uniq
+# Bonus brownie points if you replace the "sed" with something else.
 ```
