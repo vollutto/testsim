@@ -50,10 +50,11 @@ Your job is to develop a pipeline to analyse this data by doing some quality che
 on the reads, removing sequencing adapters, aligning the adapter-free reads to the
 E. coli genome, and generating a report about the whole process.
 
-When complete, your pipeline should be able to automatically (list not necessarily in order):
+When complete, your pipeline should be able to automatically do the following (list not necessarily in order):
 
 - Download the E. coli genome
-    - You can get if from ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz
+    - You can get if from
+    `ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz`
 - QC the data using the FastQC software (fastqc in conda)
 - Remove the adapters from the data (cutadapt in conda)
 - Index the genome (star in conda)
@@ -62,7 +63,20 @@ When complete, your pipeline should be able to automatically (list not necessari
 
 > Keep in mind that you should only repeat for each sample those commands that
 > analyse samples. There are other, generic commands that should only be run once.
+
 > This may require modifying the provided script to analyse samples.
+
+## Once you are done
+
+Once you are done, you should first export a file with your conda environment information.
+
+```shell
+mkdir envs
+conda env export > envs/rna-seq.yaml
+```
+
+You should **add** the new files to the staging area, **commit** them to the local repository,
+and **push** your changes to the remote repository.
 
 ## Hints
 
