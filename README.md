@@ -93,7 +93,7 @@ mkdir envs
 conda env export > envs/rna-seq.yaml
 ```
 
-You should **add** the new files to the staging area, **commit** them to the local repository,
+You should **add** the new file to the staging area, **commit** it to the local repository,
 and **push** your changes to the remote repository.
 
 ## Hints
