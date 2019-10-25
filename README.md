@@ -143,6 +143,8 @@ the pipeline you can see the output of the log file by running this command **on
 
 When you are done, your working directory should look something like this:
 
+> This is just to guide you, it doesn't need to be the exact same.
+
 ```shell
 .
 ├── data
