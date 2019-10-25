@@ -1,4 +1,4 @@
-# RNA-seq analysis of E. coli with over-expressed DNA-damage handling proteins.
+# RNA-seq analysis of E. coli with over-expressed DNA-damage handling proteins
 
 ## Introduction
 
@@ -69,6 +69,8 @@ on the reads, removing sequencing adapters, aligning the adapter-free reads to t
 E. coli genome, and generating a report about the whole process.
 
 When complete, your pipeline should be able to automatically do the following (list not necessarily in order):
+
+> Remember to activate your conda environment and to always check that you are in the root of your working directory.
 
 - Download the E. coli genome
     - You can get if from
