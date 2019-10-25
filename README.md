@@ -38,11 +38,11 @@ You can now start working on your local copy of the repository.
 
 > Remember to commit often. Don't go crazy about it, but do generate a history of your work.
 
-
 ### Organisation of your files
 
 The repository already contains a folder structure to help you organise your files.
-It also contains the data files for three different E. coli samples.
+It also contains the data files for three different E. coli samples, and the pipeline
+script you wrote in class that runs cutadapt, the star indexing, and the star alignment.
 
 ## Your tasks
 
@@ -61,7 +61,8 @@ When complete, your pipeline should be able to automatically (list not necessari
 - Generate a report with MultiQC (multiqc in conda)
 
 > Keep in mind that you should only repeat for each sample those commands that
-analyse samples. There are other, generic commands that should only be run once.
+> analyse samples. There are other, generic commands that should only be run once.
+> This may require modifying the provided script to analyse samples.
 
 ## Hints
 
@@ -88,4 +89,3 @@ do
 done
 # place here any commands that need to run after analysing the samples
 ```
-
