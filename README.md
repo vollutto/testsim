@@ -121,3 +121,108 @@ You can obtain the list of samples from the sample files with this command:
 ls data/*.fastq.gz | cut -d "_" -f1 | sed 's:data/::' | sort | uniq
 # Bonus brownie points if you replace the "sed" with something else.
 ```
+
+### Creating directories
+
+You can use the "-p" argument of "mkdir" to make it create the directory if
+it doesn't exist, and do nothing if it does.
+
+### Monitoring the execution of your pipeline
+
+You may want to redirect the output from your main script to a file, so you can see what worked
+and what not. You can redirecto **both** stdout and stderr like this:
+
+`bash run_pipeline.sh &> log/run_pipeline.out`
+
+By running that command you will see nothing on screen, so if you want to monitor the progress of
+the pipeline you can see the output of the log file by running this command **on a new terminal**:
+
+`tail -f log/run_pipeline.out`
+
+### Final state of your working directory
+
+When you are done, your working directory should look something like this:
+
+```shell
+.
+├── data
+│   ├── ERR2868172_1.fastq.gz
+│   ├── ERR2868172_2.fastq.gz
+│   ├── ERR2868173_1.fastq.gz
+│   ├── ERR2868173_2.fastq.gz
+│   ├── ERR2868174_1.fastq.gz
+│   └── ERR2868174_2.fastq.gz
+├── log
+│   ├── cutadapt
+│   │   ├── ERR2868172.log
+│   │   ├── ERR2868173.log
+│   │   └── ERR2868174.log
+│   └── run_pipeline.out
+├── Log.out
+├── out
+│   ├── cutadapt
+│   │   ├── ERR2868172_1.trimmed.fastq.gz
+│   │   ├── ERR2868172_2.trimmed.fastq.gz
+│   │   ├── ERR2868173_1.trimmed.fastq.gz
+│   │   ├── ERR2868173_2.trimmed.fastq.gz
+│   │   ├── ERR2868174_1.trimmed.fastq.gz
+│   │   └── ERR2868174_2.trimmed.fastq.gz
+│   ├── fastqc
+│   │   ├── ERR2868172_1_fastqc.html
+│   │   ├── ERR2868172_1_fastqc.zip
+│   │   ├── ERR2868172_2_fastqc.html
+│   │   ├── ERR2868172_2_fastqc.zip
+│   │   ├── ERR2868173_1_fastqc.html
+│   │   ├── ERR2868173_1_fastqc.zip
+│   │   ├── ERR2868173_2_fastqc.html
+│   │   ├── ERR2868173_2_fastqc.zip
+│   │   ├── ERR2868174_1_fastqc.html
+│   │   ├── ERR2868174_1_fastqc.zip
+│   │   ├── ERR2868174_2_fastqc.html
+│   │   └── ERR2868174_2_fastqc.zip
+│   ├── multiqc
+│   │   ├── multiqc_data
+│   │   │   ├── multiqc_cutadapt.txt
+│   │   │   ├── multiqc_data.json
+│   │   │   ├── multiqc_fastqc.txt
+│   │   │   ├── multiqc_general_stats.txt
+│   │   │   ├── multiqc.log
+│   │   │   ├── multiqc_sources.txt
+│   │   │   └── multiqc_star.txt
+│   │   └── multiqc_report.html
+│   └── star
+│       ├── ERR2868172
+│       │   ├── Aligned.out.sam
+│       │   ├── Log.final.out
+│       │   ├── Log.out
+│       │   ├── Log.progress.out
+│       │   └── SJ.out.tab
+│       ├── ERR2868173
+│       │   ├── Aligned.out.sam
+│       │   ├── Log.final.out
+│       │   ├── Log.out
+│       │   ├── Log.progress.out
+│       │   └── SJ.out.tab
+│       └── ERR2868174
+│           ├── Aligned.out.sam
+│           ├── Log.final.out
+│           ├── Log.out
+│           ├── Log.progress.out
+│           └── SJ.out.tab
+├── README.md
+├── res
+│   └── genome
+│       ├── ecoli.fasta
+│       └── star_index
+│           ├── chrLength.txt
+│           ├── chrNameLength.txt
+│           ├── chrName.txt
+│           ├── chrStart.txt
+│           ├── Genome
+│           ├── genomeParameters.txt
+│           ├── SA
+│           └── SAindex
+└── scripts
+    ├── analyse_sample.sh
+    └── run_pipeline.sh
+```
